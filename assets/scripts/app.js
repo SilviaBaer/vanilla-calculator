@@ -2,8 +2,9 @@ const defaultResult = 0;
 let currentResult = defaultResult;
 
 function add() {
-    const calcDescription = `${currentResult} + ${userInput.value}`//using ${} .toString is implicit
-    currentResult = currentResult + +userInput.value;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
+    const enteredNumber = parseInt(userInput.value)
+    const calcDescription = `${currentResult} + ${enteredNumber}`//using ${} .toString is implicit
+    currentResult = currentResult + enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
     outputResult(currentResult, calcDescription);
 } 
 
