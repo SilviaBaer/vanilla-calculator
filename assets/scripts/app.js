@@ -1,8 +1,12 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
 
+function getUserInput() {
+    return parseInt(usrInput.value)
+}
+
 function add() {
-    const enteredNumber = parseInt(userInput.value)
+    const enteredNumber = getUserInput();
     const calcDescription = `${currentResult} + ${enteredNumber}`//using ${} .toString is implicit
     currentResult = currentResult + enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
     outputResult(currentResult, calcDescription);
