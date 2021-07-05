@@ -2,7 +2,7 @@ const defaultResult = 0;
 let currentResult = defaultResult;
 
 function add() {
-    currentResult = currentResult + userInput.value;
+    currentResult = currentResult + +userInput.value;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
     outputResult(currentResult, "");
 } 
 
