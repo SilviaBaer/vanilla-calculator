@@ -101,3 +101,20 @@ divideBtn.addEventListener("click", divide);
 - objects {} -> grouped/related data, organize data, key value pair
 - Arrays [] -> list data, mix of data types possible
 */
+
+/* SPECIAL VALUES
+
+- undefined: default value of uninitialized vars -> data type
+let userName;  
+console.log(userName) -> undefined
+
+let userName = "Max";  
+console.log(userName) -> "Max"
+
+- null: never assumed by default, used to reset or clear a value -> data type
+let userName = null;  
+console.log(userName) -> null //resetted!!
+
+- NaN: not a number!! -> not a type, it is a type number and therefore can be used in calcs
+3 * "hello" -> NaN 
+*/
