@@ -18,8 +18,10 @@ function add() {
         number: enteredNumber,
         newResult: currentResult
     }
-    logEntries.push(enteredNumber);//store values in an array
-    console.log(logEntry);
+    //logEntries.push(enteredNumber);//store values in an array
+    logEntries.push(logEntry);//store object in an array
+    console.log(logEntry.operation)//isolate specific property out of an object
+    console.log(logEntries);
 } 
 
 function subtract() {
