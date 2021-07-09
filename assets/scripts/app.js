@@ -49,3 +49,13 @@ divideBtn.addEventListener("click", divide);
 
 //Global Scope = can use Globally and Locally 
 //Local Scope = can use Locally only. The only way to export it is to return it
+
+
+/* CORE DATA TYPES
+
+- numbers
+- strings
+- booleans
+- objects {} -> grouped/related data, organize data, key value pair
+- Arrays -> list data, mix of data types possible
+*/
