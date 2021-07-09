@@ -53,9 +53,9 @@ divideBtn.addEventListener("click", divide);
 
 /* CORE DATA TYPES
 
-- numbers
-- strings
-- booleans
+- numbers 1 23 
+- strings "", '', ``,
+- booleans if ...
 - objects {} -> grouped/related data, organize data, key value pair
-- Arrays -> list data, mix of data types possible
+- Arrays [] -> list data, mix of data types possible
 */
