@@ -117,4 +117,6 @@ console.log(userName) -> null //resetted!!
 
 - NaN: not a number!! -> not a type, it is a type number and therefore can be used in calcs
 3 * "hello" -> NaN 
+
+typeof (checks type of data)//array is just a special type of object
 */
