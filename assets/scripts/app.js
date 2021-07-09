@@ -8,28 +8,28 @@ function getUserInput() {
 function add() {
     const enteredNumber = getUserInput();
     const calcDescription = `${currentResult} + ${enteredNumber}`//using ${} .toString is implicit
-    currentResult = currentResult + enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
+    currentResult += enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
     outputResult(currentResult, calcDescription);
 } 
 
 function subtract() {
     const enteredNumber = getUserInput();
     const calcDescription = `${currentResult} - ${enteredNumber}`//using ${} .toString is implicit
-    currentResult = currentResult - enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
+    currentResult -= enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
     outputResult(currentResult, calcDescription);
 }
 
 function multiply() {
     const enteredNumber = getUserInput();
     const calcDescription = `${currentResult} * ${enteredNumber}`//using ${} .toString is implicit
-    currentResult = currentResult * enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
+    currentResult *= enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
     outputResult(currentResult, calcDescription);
 }
 
 function divide() {
     const enteredNumber = getUserInput();
     const calcDescription = `${currentResult} / ${enteredNumber}`//using ${} .toString is implicit
-    currentResult = currentResult / enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
+    currentResult /= enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
     outputResult(currentResult, calcDescription);
 }
 
