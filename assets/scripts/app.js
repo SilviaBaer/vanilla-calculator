@@ -8,11 +8,18 @@ function getUserInput() {
 
 function add() {
     const enteredNumber = getUserInput();
+    const initialResult = currentResult;
     const calcDescription = `${currentResult} + ${enteredNumber}`//using ${} .toString is implicit
     currentResult += enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
     outputResult(currentResult, calcDescription);
+    const logEntry = {
+        operation: "ADD",
+        prevResult: initialResult,
+        number: enteredNumber,
+        newResult: currentResult
+    }
     logEntries.push(enteredNumber);//store values in an array
-    console.log(logEntries);
+    console.log(logEntry);
 } 
 
 function subtract() {
