@@ -1,5 +1,6 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
+let logEntries = [];
 
 function getUserInput() {
     return parseInt(usrInput.value)
@@ -10,6 +11,8 @@ function add() {
     const calcDescription = `${currentResult} + ${enteredNumber}`//using ${} .toString is implicit
     currentResult += enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
     outputResult(currentResult, calcDescription);
+    logEntries.push(enteredNumber);//store values in an array
+    console.log(logEntries);
 } 
 
 function subtract() {
