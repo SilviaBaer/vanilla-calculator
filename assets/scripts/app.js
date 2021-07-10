@@ -14,12 +14,13 @@ function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
   }
 
 function calculateResult(calculationType) {
-    
+    const enteredNumber = getUserInput();
     if (//all conditions need to be true in order to proceed
         calculationType !== "ADD" &&
         calculationType !== "SUBTRACT" &&
         calculationType !== "MULTIPLY" &&
-        calculationType !== "DIVIDE" 
+        calculationType !== "DIVIDE" ||
+        !enteredNumber //enteredNumber !== 0
     ) {
         return;
     }
@@ -30,7 +31,6 @@ function calculateResult(calculationType) {
         calculationType === "MULTIPLY" ||
         calculationType === "DIVIDE" 
     ) { */
-    const enteredNumber = getUserInput();
     const initialResult = currentResult;
     let mathOperator
     if (calculationType === "ADD") {
