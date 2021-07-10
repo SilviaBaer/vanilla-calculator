@@ -15,7 +15,7 @@ function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
 
 function calculateResult(calculationType) {
     
-    if (
+    if (//all conditions need to be true in order to proceed
         calculationType !== "ADD" &&
         calculationType !== "SUBTRACT" &&
         calculationType !== "MULTIPLY" &&
@@ -24,6 +24,12 @@ function calculateResult(calculationType) {
         return;
     }
     
+ /*    if (//if only ONE of the following is true than the rest is true
+        calculationType === "ADD" ||
+        calculationType === "SUBTRACT" ||
+        calculationType === "MULTIPLY" ||
+        calculationType === "DIVIDE" 
+    ) { */
     const enteredNumber = getUserInput();
     const initialResult = currentResult;
     let mathOperator
