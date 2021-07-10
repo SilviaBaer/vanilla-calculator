@@ -1,0 +1,19 @@
+=
+== check for value equality
+!= check for value inequality
+=== check for value and type equality
+!== check for value  and type inequality
+> & < check for value being greater / smaller (a < b) (also works for alphabetical order!)
+>= & <= check for value being greater or equal / smaller or equal (a <= b)
+! check if NOT true
+
+!!! ARRAYS AND OBJECTS WORK DIFFERENTLY WHEN COMPARED !!!
+
+&& AND 
+|| OR
+
+A && B || C
+
+if A AND B are BOTH true (evaluated together)
+if A AND B are not true THEN C is true (evaluated as an alternative) 
+
