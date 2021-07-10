@@ -2,43 +2,38 @@ const defaultResult = 0;
 let currentResult = defaultResult;
 let logEntries = [];
 
+// Gets input from input field
 function getUserInput() {
     return parseInt(usrInput.value)
 }
 
-function add() {
+// Generates and writes calculation log
+function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
+    const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`;
+    outputResult(currentResult, calcDescription); // from vendor file
+  }
+
+function calculateResult(calculationType) {
     const enteredNumber = getUserInput();
     const initialResult = currentResult;
-    const calcDescription = `${currentResult} + ${enteredNumber}`//using ${} .toString is implicit
-    currentResult += enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
-    outputResult(currentResult, calcDescription);
-    const logEntry = {
-        operation: "ADD",
-        prevResult: initialResult,
-        number: enteredNumber,
-        newResult: currentResult
+    let mathOperator
+    if (calculationType === "ADD") {
+        currentResult += enteredNumber; 
+        mathOperator = "+"; 
+    } else {
+        currentResult -= enteredNumber; 
+        mathOperator = "-";
     }
-    //logEntries.push(enteredNumber);//store values in an array
-    logEntries.push(logEntry);//store object in an array
-    console.log(logEntry.operation)//isolate specific property out of an object
-    console.log(logEntries);
+    createAndWriteOutput(mathOperator, initialResult, enteredNumber);
+  writeToLog(calculationType, initialResult, enteredNumber, currentResult);
+}
+
+function add() {
+    calculateResult("ADD")
 } 
 
 function subtract() {
-    const enteredNumber = getUserInput();
-    const initialResult = currentResult;
-    const calcDescription = `${currentResult} - ${enteredNumber}`//using ${} .toString is implicit
-    currentResult -= enteredNumber;//or parseInt(userInput.value) for interger or parseFloat(userInput.value) for decimals too
-    outputResult(currentResult, calcDescription);
-    const logEntry = {
-        operation: "SUBTRACT",
-        prevResult: initialResult,
-        number: enteredNumber,
-        newResult: currentResult
-    }
-    //logEntries.push(enteredNumber);//store values in an array
-    logEntries.push(logEntry);//store object in an array
-    console.log(logEntries);
+    calculateResult("SUBTRACT")
 }
 
 function multiply() {
